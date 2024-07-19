@@ -1,3 +1,13 @@
+# HLD objects and libs
+.vscode/
+*bin/
+*bin_*/
+*.zip
+*.TMP
+*.user.*
+*/Z-Package-Installer/file_ver.h
+
+
 # C++ objects and libs
 *.slo
 *.lo

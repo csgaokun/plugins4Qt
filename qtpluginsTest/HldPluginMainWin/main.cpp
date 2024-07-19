@@ -7,8 +7,8 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include "interfaceplugin.h"
-#include "../qtpluginmanager/qtpluginmanager.h"
-#include "../qtpluginmanager/plugininterface.h"
+#include "qtpluginmanager.h"
+#include "plugininterface.h"
 #include "../GenericPlugin1/genericplugin1.h"
 #include "monitor.h"
 
@@ -16,11 +16,9 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-
-
     //加载exe所在目录下  plugin文件夹的所有插件
     QDir path = QDir(qApp->applicationDirPath());
-    path.cd("plugins");
+    path.cd("hldPlugins");
     foreach (QFileInfo info, path.entryInfoList(QDir::Files | QDir::NoDotAndDotDot))
     {
         QPluginLoader pluginLoader(info.absoluteFilePath());
@@ -42,12 +40,8 @@ int main(int argc, char *argv[])
             {
                 app->output("i am a plugin");
             }
-
         }
     }
-
-
-    /////////----------------------
 
     QtPluginsManager::instance()->loadAllPlugins();//插件管理器 加载所有插件
     auto plugins=QtPluginsManager::instance()->allPlugins();
@@ -61,13 +55,5 @@ int main(int argc, char *argv[])
             app->setInitData(data);
         }
     }
-
-
     QtPluginsManager::instance()->unloadAllPlugins();
-
-
-//    Widget w;
-//    w.show();
-
-//    return a.exec();
 }

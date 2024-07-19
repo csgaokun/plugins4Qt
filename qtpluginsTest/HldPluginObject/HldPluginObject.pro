@@ -1,8 +1,9 @@
 TEMPLATE = subdirs
 
-SUBDIRS += \
-    Main \
+SUBDIRS += \    
     pluginA \
     GenericPlugin1 \
     GenericPlugin2 \
-    qtpluginmanager
+    HldPluginsmanager
+
+CONFIG += ordered

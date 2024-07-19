@@ -1,41 +1,35 @@
-﻿#ifndef GENERICPLUGIN1_H
-#define GENERICPLUGIN1_H
+﻿#ifndef GENERICPLUGIN2_H
+#define GENERICPLUGIN2_H
 
 #include <QObject>
 #include <QtPlugin>
 #include <QDebug>
-#include "../qtpluginmanager/pluginmetadata.h"
-#include "../qtpluginmanager/plugininterface.h"
+#include "../HldPluginsmanager/pluginmetadata.h"
+#include "../HldPluginsmanager/plugininterface.h"
 
-class GenericPlugin1 : public QObject, public PluginInterface
+class GenericPlugin2 : public QObject, public PluginInterface
 {
     // programmer.json 插件的信息描述类
     Q_OBJECT
     Q_PLUGIN_METADATA(IID PluginInterface_iid FILE "programmer.json") // QT5.0 引入
     Q_INTERFACES(PluginInterface)
 public:
-    GenericPlugin1() {}
-    ~GenericPlugin1() {}
+    GenericPlugin2() {}
+    ~GenericPlugin2() {}
 
     void setInitData(QMap<QString,QVariant> &data) Q_DECL_OVERRIDE {
-        qDebug() << "GenericPlugin1 setInitDat..." << data;
+        qDebug() << "GenericPlugin2 setInitDat..." << data;
         map=&data;
-
-        PluginMetaData metadata;
-        metadata.from = "GenericPlugin1";
-        metadata.dest = "GenericPlugin2";
-        metadata.type = 1;
-        emit sendMsgToManager(metadata);
     }
 
     QMap<QString,QVariant>& getResultData() Q_DECL_OVERRIDE {
-        qDebug() << "GenericPlugin1 getResultData...";
+        qDebug() << "GenericPlugin2 getResultData...";
         return *map;
     }
 
 
     void recMsgFromManager(PluginMetaData &msg) Q_DECL_OVERRIDE {
-        qDebug() << "GenericPlugin1 recMsgFromManager..." << msg.from;
+        qDebug() << "GenericPlugin2 recMsgFromManager..." << msg.from;
     }
 
     bool connectTosendMsgToManager(QObject *receiver, const char *pszSlot, bool isConnect) const Q_DECL_OVERRIDE {
@@ -53,4 +47,4 @@ signals:
 
 };
 
-#endif // GENERICPLUGIN1_H
+#endif // GENERICPLUGIN2_H

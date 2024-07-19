@@ -1,2 +1,0 @@
-# qtplugins
-qtplugins for job

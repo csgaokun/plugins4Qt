@@ -1,8 +1,10 @@
 TEMPLATE = subdirs
 
 SUBDIRS += Z-Package-Installer \
-                PluginApp
+            HldPluginObject  \
+            HldPluginMainWin
 
-PluginApp.depends =  Z-Package-Installer
+
+HldPluginMainWin.depends =  Z-Package-Installer HldPluginObject
 
 CONFIG += ordered

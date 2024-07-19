@@ -3,7 +3,7 @@
 
 #include <QObject>
 #include <QtDebug>
-#include <../qtpluginmanager/plugininterface.h>
+#include "plugininterface.h"
 
 class Monitor : public QObject
 {

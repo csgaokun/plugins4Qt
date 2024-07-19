@@ -4,7 +4,7 @@
 
 #include <QObject>
 #include <QtPlugin>
-#include "../Main/interfaceplugin.h"
+#include "../../HldPluginMainWin/interfaceplugin.h"
 
 class PluginA : public QObject, public InterfacePlugin
 {
