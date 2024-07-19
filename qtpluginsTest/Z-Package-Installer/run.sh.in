@@ -1,0 +1,7 @@
+#!/bin/bash
+exeApp=\"$$EXE_APP\"
+result=`pwd`
+echo $result
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${result}/lib
+echo  $LD_LIBRARY_PATH
+./$exeApp

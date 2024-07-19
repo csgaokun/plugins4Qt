@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=HldDistributorService
+GenericName=HldDistributorService  applications
+Exec=/home/ins/IBSN0/HLDBridge/APPSH/start_hlddistributorservice.sh  %F
+Icon=hlddistributorservice
+Type=Application
+Terminal=false
+Categories=Qt;Development;

@@ -1,0 +1,11 @@
+Package: hldDistributorService
+Version: 1.0.0
+Section: hld
+Priority: optional
+Depends:hldConfigDistributorService
+Suggests:
+Architecture: HLDPACKAGENAME
+Installed-Size: ********
+Maintainer: hlx@highlander.com
+HomePage: https://www.highlander.com/
+Description: AvoidCollisionClient App for HLD

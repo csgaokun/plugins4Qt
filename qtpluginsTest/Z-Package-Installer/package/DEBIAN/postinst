@@ -1,0 +1,5 @@
+#!/bin/bash
+chmod 755 /home/ins/IBSN0/HLDBridge/HldDistributorService   -R
+chmod 755 /home/ins/IBSN0/HLDBridge/APPSH/start_hlddistributorservice.sh
+chown root:root /etc/xdg/autostart/QRDecode_hlddistributorservice.desktop
+chmod 644 /etc/xdg/autostart/QRDecode_hlddistributorservice.desktop

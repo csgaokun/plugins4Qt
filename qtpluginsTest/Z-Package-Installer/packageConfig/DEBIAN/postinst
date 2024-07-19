@@ -1,0 +1,2 @@
+#!/bin/bash
+chmod 755 /home/ins/IBSN0/HLDBridge/HldDistributorService   -R

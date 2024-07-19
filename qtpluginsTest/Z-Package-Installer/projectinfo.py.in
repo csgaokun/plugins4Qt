@@ -1,0 +1,26 @@
+#!/usr/bin/env python
+# This script is used to pass information from qmake based .pro files to python scripts
+
+qt_bin_path = \"$$[QT_INSTALL_BINS]\"
+qt_install_path = \"$$[QT_INSTALL_PREFIX]\"
+qt_version = \"$$[QT_VERSION]\"
+
+product_name = \"$$PRODUCT_NAME\"
+app_name  = \"$$EXE_APP\"
+app_type  = \"$$EXE_APP_TYPE\"
+app_run_name  = \"$$EXE_APP_RUN_NAME\"
+platform_name = \"$$HLD_LIBPATH_NAME_PLATFORM\"
+source_path = \"$$HLD_IMAGED_SOURCE_TREE\"
+build_path = \"$$HLD_IMAGED_BUILD_TREE\"
+version_NUM = \"$$HLD_APP_BUILD_VERSION\"
+
+product = \"$$QMAKE_TARGET_PRODUCT\"
+description = \"$$QMAKE_TARGET_DESCRIPTION\"
+company = \"$$QMAKE_TARGET_COMPANY\"
+copyright = \"$$QMAKE_TARGET_COPYRIGHT\"
+
+!!IF CONFIG(debug, debug|release)
+debug = True
+!!ELSE
+debug = False
+!!ENDIF

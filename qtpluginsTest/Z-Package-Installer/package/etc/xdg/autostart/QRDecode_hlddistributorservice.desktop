@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=QRDecode_hlddistributorservice
+Exec=/home/ins/IBSN0/HLDBridge/APPSH/start_hlddistributorservice.sh
+StartupNotify=false
+NoDisplay=true
+Type=Application
+Categories=System;Utility;Archiving;
+
+Name[zh_CN]=QRDecode_hlddistributorservice.desktop

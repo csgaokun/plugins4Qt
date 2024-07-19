@@ -1,0 +1,14 @@
+#!/bin/bash
+#ExEapp=/home/ins/IBSN0/HLDBridge/HldDistributorService/HldDistributorService
+#ExeLibdir=/home/ins/IBSN0/HLDBridge/HldDistributorService/lib
+#if [ ! -f ${ExEapp} ]; then
+#    echo "the ExEapp ${ExEapp} is not exist!"
+#else
+#   rm -f  ${ExEapp}
+#fi
+
+#if [ ! -d ${ExeLibdir} ]; then
+#    echo "the ExeLibdir ${ExeLibdir} is not exist!"
+#else
+#   rm -r  ${ExeLibdir}
+#fi
