@@ -5,8 +5,8 @@
 *.zip
 *.TMP
 *.user.*
-*/Z-Package-Installer/file_ver.h
-
+*/Z-Package-Installer/file_ver*
+*/build/*
 
 # C++ objects and libs
 *.slo
